@@ -16,3 +16,8 @@ duplicate_genre= spotify_genre.duplicated().sum()
 print(duplicate_genre)
 duplicate_playlist=spotify_playlist.duplicated().sum()
 print(duplicate_playlist)
+
+missing_genre=spotify_genre.isnull().sum()
+print(missing_genre)
+missing_playlist= spotify_playlist.isnull().sum()
+print(missing_playlist)
