@@ -8,3 +8,7 @@ spotify_genre=pd.read_csv('genres_v2.csv')
 spotify_playlist= pd.read_csv('playlists.csv')
 print(spotify_genre)
 print(spotify_playlist)
+
+spotify_genre.info()
+spotify_playlist.info()
+
