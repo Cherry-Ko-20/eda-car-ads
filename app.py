@@ -12,3 +12,7 @@ print(spotify_playlist)
 spotify_genre.info()
 spotify_playlist.info()
 
+duplicate_genre= spotify_genre.duplicated().sum()
+print(duplicate_genre)
+duplicate_playlist=spotify_playlist.duplicated().sum()
+print(duplicate_playlist)
