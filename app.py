@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import streamlit as st 
 import plotly.express as px
 import numpy as np
+from PIL import Image 
 
 spotify_genre=pd.read_csv('genres_v2.csv')
 spotify_playlist= pd.read_csv('playlists.csv')
