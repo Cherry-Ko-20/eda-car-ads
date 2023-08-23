@@ -28,21 +28,14 @@ spotify_genre= spotify_genre.drop(columns= ["Unnamed: 0"])
 print(spotify_genre)
 
 
-# spotify_genre.hist(figsize=(12, 10))
-# plt.tight_layout()
-# plt.show()
-
-
 #Streamlit app
 st.header('Spotify Genre Analysis')
-show_scatter = st.checkbox('Show Scatter Plot', value=True)
+
 
 #Scatter plot or histogram based on checkbox value 
-if show_scatter:
-    st.subheader('Scatter PlotL: Danceability vs Energy')
+st.subheader('Scatter PlotL: Danceability vs Energy')
     scatter_fig = px.scatter(spotify_genre, x = 'danceability', y= 'energy', color='genre')
     st.plotly_chart(scatter_fig)
-else:
-    st.subheader('Histogram: Danceability')
+st.subheader('Histogram: Danceability')
     histogram_fig= px.histogram(spotify_genre, x = 'danceability', color= 'genre', marginal='rug')
     st.plotly_chart(histogram_fig)
