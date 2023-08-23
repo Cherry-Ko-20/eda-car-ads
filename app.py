@@ -7,7 +7,7 @@ from PIL import Image
 import scipy as sp
 import seaborn as sns 
 
-spotify_genre=pd.read_csv('genres_v2.csv')
+spotify_genre = pd.read_csv('genres_v2.csv')
 spotify_playlist= pd.read_csv('playlists.csv')
 print(spotify_genre)
 print(spotify_playlist)
