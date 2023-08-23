@@ -39,21 +39,3 @@ sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
 plt.title('Correlation Heatmap')
 plt.show()
 
-# Countplot of genre distribution
-sns.countplot(data=spotify_genre, x='genre')
-plt.xticks(rotation=90)
-plt.title('Genre Distribution')
-plt.show()
-
-# Box plot of danceability by genre
-plt.figure(figsize=(12, 6))
-sns.boxplot(data=spotify_genre, x='genre', y='danceability')
-plt.xticks(rotation=90)
-plt.title('Danceability by Genre')
-plt.show()
-
-# Scatter plot of energy vs loudness
-plt.figure(figsize=(8, 6))
-sns.scatterplot(data=spotify_genre, x='energy', y='loudness', hue='genre')
-plt.title('Energy vs Loudness')
-plt.show()
