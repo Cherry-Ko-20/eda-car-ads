@@ -45,9 +45,19 @@ st.plotly_chart(histogram_fig)
 selected_genre = st.selectbox('Select Genre for Histogram', spotify_genre['genre'].unique())
 filtered_data = spotify_genre[spotify_genre['genre'] == selected_genre]
 
-# Histogram based on selected genre
+# # Histogram based on selected genre
+# st.subheader(f'Histogram: Danceability for {selected_genre}')
+# histogram_fig = px.histogram(filtered_data, x='danceability', marginal='rug')
+# st.plotly_chart(histogram_fig)
+
 st.subheader(f'Histogram: Danceability for {selected_genre}')
-histogram_fig = px.histogram(filtered_data, x='danceability', marginal='rug')
+histogram_fig = px.histogram(filtered_data, x='danceability', marginal='rug', 
+                             color_discrete_sequence=['lightblue'],
+                             opacity=0.7, 
+                             barmode='overlay',
+                             barnorm='percent',
+                             title=f'Histogram: Danceability for {selected_genre}')
+histogram_fig.update_traces(marker_line_color='black', marker_line_width=1)
 st.plotly_chart(histogram_fig)
 
 selected_genre_scatter = st.selectbox('Select Genre for Scatter Plot', spotify_genre['genre'].unique())
@@ -55,7 +65,7 @@ filtered_data_scatter = spotify_genre[spotify_genre['genre'] == selected_genre_s
 
 selected_columns = st.multiselect('Select Columns for Scatter Plot', spotify_genre.columns)
 
-if len(selected_columns) == 2:  # Only plot if exactly 2 columns are selected
+if len(selected_columns) == 2:  
     scatter_data = filtered_data_scatter[selected_columns]
     x_column, y_column = selected_columns
     
