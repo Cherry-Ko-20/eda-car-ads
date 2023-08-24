@@ -33,7 +33,7 @@ st.header('Spotify Genre Analysis')
 
 
 #Scatter plot or histogram based on checkbox value 
-st.subheader('Scatter PlotL: Danceability vs Energy')
+st.subheader('Scatter Plot: Danceability vs Energy')
 scatter_fig = px.scatter(spotify_genre, x = 'danceability', y= 'energy', color='genre')
 st.plotly_chart(scatter_fig)
 
@@ -45,10 +45,6 @@ st.plotly_chart(histogram_fig)
 selected_genre = st.selectbox('Select Genre for Histogram', spotify_genre['genre'].unique())
 filtered_data = spotify_genre[spotify_genre['genre'] == selected_genre]
 
-# # Histogram based on selected genre
-# st.subheader(f'Histogram: Danceability for {selected_genre}')
-# histogram_fig = px.histogram(filtered_data, x='danceability', marginal='rug')
-# st.plotly_chart(histogram_fig)
 
 st.subheader(f'Histogram: Danceability for {selected_genre}')
 histogram_fig = px.histogram(filtered_data, x='danceability', marginal='rug', 
