@@ -23,4 +23,8 @@
 ### Contributing
 > Contributions are welcome! If you find any issues or improvements, please submit a pull request.
 
+### Version History
+|Version|Realease Date|Year|Contributor|
+|-------|-------------|----|-----------|
+|Version 1.0|August 24|2023|Cherry Ko|
 
