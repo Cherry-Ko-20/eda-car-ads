@@ -1,8 +1,8 @@
 pandas
-matplotlib.pyplot
+matplotlib
 streamlit
-plotly.express
+plotly
 numpy
-PIL
+Pillow
 scipy
 seaborn
