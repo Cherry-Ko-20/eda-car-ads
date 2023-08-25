@@ -16,7 +16,6 @@
 
 
 ### How to run
-
 > Run the Streamlit app using the following command: (streamlit run app.py)
 > The app will launch in your web browser, allowing you to interact with the visualizations.
 
@@ -28,3 +27,8 @@
 |-------|-------------|----|-----------|
 |Version 1.0|August 24|2023|Cherry Ko|
 
+### Web App URL 
+> https://spotify-genre-analysis.onrender.com/
+
+### Copy Rights
+© [2023] [Cherry Ko]. All rights reserved.
