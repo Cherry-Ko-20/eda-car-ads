@@ -2,7 +2,7 @@
 > This project performs exploratory data analysis (EDA) on a dataset of songs from Spotify, focusing on different genres and their attributes.
 
 
-### Getting Started
+## Getting Started
 
 ### Prerequisites
 > Python 
